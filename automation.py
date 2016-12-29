@@ -1,4 +1,5 @@
 inventory = {"arrow": 12, "gold coin": 42, "rope": 1, "torch": 6, "dagger": 1}
+loot = ["gold coin", "dagger", "gold coin", "gold coin", "ruby"]
 
 
 def displayInventory(items):
@@ -21,4 +22,15 @@ def displayInventory(items):
     print("Total number of items: {}".format(total))
 
 
-displayInventory(inventory)
+def addToInventory(inventory, loot):
+    for x in loot:
+        if x in inventory:
+            inventory[x] += 1
+
+        else:
+            inventory.setdefault("{}".format(x), 1)
+
+    displayInventory(inventory)
+
+
+addToInventory(inventory, loot)

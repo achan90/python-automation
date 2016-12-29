@@ -21,4 +21,4 @@ def displayInventory(items):
     print("Total number of items: {}".format(total))
 
 
-displayInventory(inventory)
+
